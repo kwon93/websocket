@@ -1,21 +1,16 @@
 package com.websocket.websocket.object;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.core.io.support.SpringFactoriesLoader;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class HelloMessage {
 
-    private String name;
+    private Long senderId;
+    private String content;
 
-    public HelloMessage(String name) {
-        this.name = name;
-    }
-
-    public HelloMessage() {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
